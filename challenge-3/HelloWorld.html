@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Title here -->
+    <title>RPC Home</title>
+    <!-- Description, Keywords and Author -->
+    <meta name="description" content="RPC" />
+    <meta name="keywords" content="RPC" />
+    <meta name="author" content="RPC" />
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/font-awesome.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/response.css" />
+
+        
+    <script type="text/javascript">
+       
+        let Box = {};
+        Box.close = () =>{
+            let body = document.body;
+            let modal = body.querySelectorAll(".box-modal");
+            modal.forEach((dom) => {
+                dom.parentNode.removeChild(dom);
+            })
+        };
+        Box.show = (boxhtml) => {
+            Box.close;
+            let Dom = document.createElement('div');
+            Dom.classList.add('box-modal');
+            Dom.innerHTML = boxhtml;
+            document.body.append(Dom);
+        };
+
+        function showcustom(img){
+            let innerhtml = 
+            `<div class="alert">
+                <button class="button" onclick="Box.close()"></button>
+            <h3 class="alertTitle">Collaboration</h3>
+            <div class="image" id="aaa"></div>                 
+            </div>`;
+            Box.show(innerhtml);            
+            document.getElementById("aaa").style.backgroundImage="url("+ img +")";
+        }
+   
+    </script>
+</head>
+<body style="background:linear-gradient(180deg, #3856BF 0%, #E57E67 100%);">
+    
+    <!--start heading-->
+    <div class="agileits_top_menu">
+        <div class="container">
+            <div class="w3l_header_left">
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+
+
+    <h4 class="title">HELLO WORLD</h4>
+    <h5 class="sub">Wow! Check out all the cool CSS and Javascript things I can do!</h5>
+    <ul class="canvas">
+    <li class="avatarItem">
+        <div onclick="showcustom('images/surface-ZlJmOUFRBfQ-unsplash.jpg')" class="circle"></div>
+    </li>
+    <li class="avatarItem">
+        <div onclick="showcustom('images/simone-hutsch-8LwKILB2ceI-unsplash.jpg')" class="rect"></div>
+    </li>
+    <li class="avatarItem">
+        <div onclick="showcustom('images/sergey-pesterev-llGiAyYthDw-unsplash.jpg')" class="square"></div>
+    </li>
+    <li class="avatarItem">
+        <div onclick="showcustom('images/lee-chinyama-6lGiNbAublo-unsplash.jpg')" class="border">
+            <div class="tri"></div>
+        </div>
+    </li>
+
+
+
+    </ul>
+    <!--end body-->
+</body>
+</html>

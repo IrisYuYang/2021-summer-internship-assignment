@@ -1,3 +1,9 @@
+/*1. Initialize count = 0
+2. take the first item of list a 
+a. determine if the item exists in list b by traverse list b and comparing each item
+b. Increment count
+c. repeat until a is traversed
+e. reverse list a and list b, repeat the same procedure */
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
